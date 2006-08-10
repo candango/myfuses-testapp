@@ -1,6 +1,6 @@
 <?php
 /**
- * Context Handler Class  - ContextHandler.class.php
+ * ContextHandler  - ContextHandler.class.php
  * 
  * Handles the Context. It is this responsability to check if the context file
  * exists if not create it. But the main responsability is store from and 
@@ -25,7 +25,7 @@
  * Fusebox" part .
  * 
  * The Initial Developer of the Original Code is Flávio Gonçalves Garcia.
- * Portions created by Flávio Gonçalves Garcia are Copyright (C) 2005 - 2006.
+ * Portions created by Flávio Gonçalves Garcia are Copyright (C) 2006 - 2006.
  * All Rights Reserved.
  * 
  * Contributor(s): Flávio Gonçalves Garcia.
@@ -33,7 +33,7 @@
  * @category   controller
  * @package    myfuses.context
  * @author     Flávio Gonçalves Garcia <fpiraz@gmail.com>
- * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
+ * @copyright  Copyright (c) 2006 - 2006 Candango Opensource Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
  * @version    SVN: $Id$
  * @link       *
@@ -43,7 +43,7 @@
  */
 
 /**
- * Context Handler Class  - ContextHandler.class.php
+ * ContextHandler  - ContextHandler.class.php
  * 
  * Handles the Context. It is this responsability to check if the context file
  * exists if not create it. But the main responsability is store from and 
@@ -54,13 +54,10 @@
  * @category   controller
  * @package    myfuses.context
  * @author     Flávio Gonçalves Garcia <fpiraz@gmail.com>
- * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
+ * @copyright  Copyright (c) 2006 - 2006 Candango Opensource Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
- * @version    SVN: $Release: Fusebox.class.php 60 2006-04-11 18:20:24Z piraz $
- * @link       *
- * @see        *
- * @since      Release 1
- * @deprecated *
+ * @version    SVN: $Revision$
+ * @since      Revision 1
  * @abstract
  */
 class ContextHandler {

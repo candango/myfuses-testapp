@@ -1,6 +1,6 @@
 <?php
 /**
- * Interface Context Regsiterable  - IContextRegisterable.class.php
+ * IContextRegisterable  - IContextRegisterable.class.php
  * 
  * Interface that defines any object that can be registred in context.
  * 
@@ -23,7 +23,7 @@
  * Fusebox" part .
  * 
  * The Initial Developer of the Original Code is Flávio Gonçalves Garcia.
- * Portions created by Flávio Gonçalves Garcia are Copyright (C) 2005 - 2006.
+ * Portions created by Flávio Gonçalves Garcia are Copyright (C) 2006 - 2006.
  * All Rights Reserved.
  * 
  * Contributor(s): Flávio Gonçalves Garcia.
@@ -31,18 +31,46 @@
  * @category   controller
  * @package    myfuses.context
  * @author     Flávio Gonçalves Garcia <fpiraz@gmail.com>
- * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
+ * @copyright  Copyright (c) 2006 - 2006 Candango Opensource Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
  * @version    SVN: $Id$
- * @link       *
- * @see        *
- * @since      Release 1
- * @deprecated *
+ * @since      Revision 3
+ */
+ 
+/**
+ * IContextRegisterable  - IContextRegisterable.class.php
+ * 
+ * Interface that defines any object that can be registred in context.
+ * 
+ * PHP version 5
+ *
+ * @category   controller
+ * @package    myfuses.context
+ * @author     Flávio Gonçalves Garcia <fpiraz@gmail.com>
+ * @copyright  Copyright (c) 2006 - 2006 Candango Opensource Group <http://www.candango.org/>
+ * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
+ * @version    SVN: $Revision$
+ * @since      Revision 3
+ * @abstract
  */
 interface IContextRegisterable {
-
-	public function getContextXML($identation = "");
-
+    
+    /**
+     * Returns the xml that represents the registration into the context
+     * 
+     * @param string identation
+     * @return string The registration XML
+     * @access public
+     */
+	public function getContextXML( $identation = "" );
+    
+    /**
+     * Sets all entity attibutes based in a given SimpleXMLElement
+     * 
+     * @param SimpleXMLElement element
+     * @access public
+     */
 	public function setAttributesFromContext( SimpleXMLElement $element );
 
 }
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */

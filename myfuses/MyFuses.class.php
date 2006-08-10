@@ -1,6 +1,6 @@
 <?php
 /**
- * My Fuses Main Controller class  - MainController.class.php
+ * MyFuses  - MyFuses.class.php
  * 
  * This is My Fuses Candango Opensource Group a implementation of Fusebox 
  * Corporation Fusebox framework. The My Fuses is used as Iflux Framework 
@@ -25,7 +25,7 @@
  * Fusebox" part .
  * 
  * The Initial Developer of the Original Code is Flávio Gonçalves Garcia.
- * Portions created by Flávio Gonçalves Garcia are Copyright (C) 2005 - 2006.
+ * Portions created by Flávio Gonçalves Garcia are Copyright (C) 2006 - 2006.
  * All Rights Reserved.
  * 
  * Contributor(s): Flávio Gonçalves Garcia.
@@ -33,10 +33,10 @@
  * @category   controller
  * @package    myfuses
  * @author     Flávio Gonçalves Garcia <fpiraz@gmail.com>
- * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
+ * @copyright  Copyright (c) 2006 - 2006 Candango Opensource Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
  * @version    SVN: $Id$
- * @since      Release 3
+ * @since      Revision 3
  */
 
 define( "MYFUSES_ROOT_PATH", dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
@@ -47,7 +47,7 @@ require_once MYFUSES_ROOT_PATH . "exception/MyFusesException.class.php";
 spl_autoload_register( "myfusesAutoLoad" );
 
 /**
- * My Fuses Main Controller class  - MainController.class.php
+ * MyFuses  - MyFuses.class.php
  * 
  * This is My Fuses Candango Opensource Group a implementation of Fusebox 
  * Corporation Fusebox framework. The My Fuses is used as Iflux Framework 
@@ -58,7 +58,7 @@ spl_autoload_register( "myfusesAutoLoad" );
  * @category   controller
  * @package    myfuses
  * @author     Flávio Gonçalves Garcia <fpiraz@gmail.com>
- * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
+ * @copyright  Copyright (c) 2006 - 2006 Candango Opensource Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
  * @version    SVN: $Revision$
  * @since      Revision 3
