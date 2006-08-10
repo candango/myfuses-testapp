@@ -36,10 +36,7 @@
  * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
  * @version    SVN: $Id$
- * @link       *
- * @see        *
- * @since      Release 1
- * @deprecated *
+ * @since      Release 3
  */
 
 define( "MYFUSES_ROOT_PATH", dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
@@ -64,10 +61,7 @@ spl_autoload_register( "myfusesAutoLoad" );
  * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
  * @version    SVN: $Release: Fusebox.class.php 60 2006-04-11 18:20:24Z piraz $
- * @link       *
- * @see        *
- * @since      Release 1
- * @deprecated *
+ * @since      Release 3
  * @abstract
  */
 abstract class MyFuses {
