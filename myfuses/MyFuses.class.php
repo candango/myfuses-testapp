@@ -60,7 +60,7 @@ spl_autoload_register( "myfusesAutoLoad" );
  * @author     Flávio Gonçalves Garcia <fpiraz@gmail.com>
  * @copyright  Copyright (c) 2005 - 2006 Candango Group <http://www.candango.org/>
  * @license    http://www.mozilla.org/MPL/MPL-1.1.html  MPL 1.1
- * @version    SVN: $Release: Fusebox.class.php 60 2006-04-11 18:20:24Z piraz $
+ * @version    SVN: $Release$
  * @since      Release 3
  * @abstract
  */
