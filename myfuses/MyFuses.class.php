@@ -168,12 +168,17 @@ abstract class MyFuses {
      * @access public
      */
     public static function processRequest() {
+        try{
+            // initilizing context if necessary
+            self::initContext();
         
-        // initilizing context if necessary
-        self::initContext();
+            // initilizing application if necessary
+            self::initApplication();	
+        }
+        catch( MyFusesFileOperationException $mffoe ) {
+        	$mffoe->breakProcess();
+        }
         
-        // initilizing application if necessary
-        self::initApplication();
         
     }
     
