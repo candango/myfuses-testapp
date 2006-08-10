@@ -1,6 +1,6 @@
 <?php
 class MyFusesMissingCoreFileException extends MyFusesException {
-
+    
     public function __construct( $file ) {
     	
         $fileX = explode( DIRECTORY_SEPARATOR, $file );
@@ -17,3 +17,4 @@ class MyFusesMissingCoreFileException extends MyFusesException {
         
     }
 }
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */

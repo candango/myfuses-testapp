@@ -2,6 +2,9 @@
 require_once MYFUSES_ROOT_PATH . 
     "exception/MyFusesMissingCoreFileException.class.php";
 
+require_once MYFUSES_ROOT_PATH . 
+    "exception/MyFusesFileOperationException.class.php";
+
 abstract class MyFusesException extends Exception {
     
     const CIRCUIT_XML_ERROR = 1;
@@ -13,7 +16,7 @@ abstract class MyFusesException extends Exception {
     const MISSING_APP_PATH = 7;
     const MISSING_CIRCUIT_XML = 8;
     const MISSING_CIRCUIT_PATH = 9;
-    const MISSING_CORE_FILE = 10;
+    
     const MISSING_MYFUSES_XML = 11;
     const MISSING_FUSE = 12;
     const MISSING_PARSED_FILE = 13;
@@ -21,9 +24,13 @@ abstract class MyFusesException extends Exception {
     const UNDEFINED_CIRCUIT = 15;
     const UNDEFINED_FUSEACTION = 16;
     
-    private $detail;
+    
+    const FILE_OPERATION = 101;
+    const MISSING_CORE_FILE = 102;
     
     private static $currentInstance;
+    
+    private $detail;
     
     private $type;
     
