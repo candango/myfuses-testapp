@@ -98,15 +98,18 @@ class ContextHandler {
         $xml .= "</context>";
         
         if( !$fp = fopen( self::getFile(),"w" ) ){
-        	die("Could not open Parsed File file");
+        	throw new MyFusesFileOperationException( self::getFile(), 
+                MyFusesFileOperationException::OPEN_FILE );
         }
         
         if ( !flock($fp,LOCK_EX) ) {
-            die("Could not get exclusive lock to Parsed File file");
+            throw new MyFusesFileOperationException( self::getFile(), 
+                MyFusesFileOperationException::LOCK_FILE );
         }
         
         if ( !fwrite($fp, $xml ) ) {
-           var_dump( "deu pau 2!!!" );
+           throw new MyFusesFileOperationException( self::getFile(), 
+                MyFusesFileOperationException::WRITE_FILE );
         }
         
         flock($fp,LOCK_UN);
@@ -132,11 +135,13 @@ class ContextHandler {
     public static function restoreContext() {
     	
         if( !$fp = fopen( self::getFile(), "r" ) ){
-            die("Could not open Parsed File file");
+            throw new MyFusesFileOperationException( self::getFile(), 
+                MyFusesFileOperationException::OPEN_FILE );
         }
         
         if ( !flock( $fp, LOCK_EX ) ) {
-            die("Could not get exclusive lock to Parsed File file");
+            throw new MyFusesFileOperationException( self::getFile(), 
+                MyFusesFileOperationException::LOCK_FILE );
         }
         
         $xmlString = fread( $fp, filesize( self::getFile() ) ); 
