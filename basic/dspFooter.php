@@ -1,0 +1,1 @@
+<br><a href="index.php?fuseaction=<?=MyFuses::getXfa( "backtoMenu" )?>">Back To Main Menu</a>

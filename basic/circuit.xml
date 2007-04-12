@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<circuit access="public">
+	
+	<fuseaction name="loop">
+		<loop from="1" to="15" index="$i">
+			<include template="dspLoop.php"/>
+		</loop>       
+    </fuseaction>
+	
+	<fuseaction name="footer" >
+		<xfa name="backtoMenu" value="main.menu" />
+		<include file="dspFooter.php" />
+		<instantiate class="Account" object="account" arguments="'piraz'" />
+	</fuseaction>
+	
+	<fuseaction name="header" >
+		<include file="dspHeader.php" />
+	</fuseaction>
+	
+	<prefuseaction>
+		<do action="header" />
+	</prefuseaction>
+	
+	<postfuseaction>
+		<do action="footer" />
+	</postfuseaction>
+	
+</circuit>
