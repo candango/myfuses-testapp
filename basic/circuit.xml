@@ -11,6 +11,8 @@
 		<xfa name="backtoMenu" value="main.menu" />
 		<include file="dspFooter.php" />
 		<instantiate class="Account" object="account" arguments="'piraz'" />
+		<invoke object="account" methodcall="getName()" />
+		
 	</fuseaction>
 	
 	<fuseaction name="header" >
