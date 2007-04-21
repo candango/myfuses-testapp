@@ -2,6 +2,8 @@
 <circuit access="public">
 	
 	<fuseaction name="menu">
+		<xfa name="goToInclude" value="basic.include" />
+		<xfa name="goToIf" value="basic.if" />
 		<xfa name="goToLoop" value="basic.loop" />
 		<include template="dspIndex.php"/>       
     </fuseaction>

@@ -14,7 +14,7 @@
 <fusebox>	
 	<circuits>
 		<circuit alias="main" path="main/" parent="" />
-		<circuit alias="basic" path="basic/" parent="" />
+		<circuit alias="basic" path="basic/" parent="main" />
 	</circuits>
     
     

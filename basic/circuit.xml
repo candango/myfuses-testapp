@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <circuit access="public">
 	
+	<fuseaction name="include">
+		<include template="dspInclude.php"/>
+    </fuseaction>
+	
+	<fuseaction name="if">
+		<xfa name="goToMyself" value="if"/>
+		<if condition="isset($_GET[ 'pessoa' ])">
+			<true>
+				<set name="status" value="true" />
+			</true>
+			<false>
+				<set name="status" value="false" />
+			</false>
+		</if>
+		<include template="dspIf.php"/>    
+    </fuseaction>
+	
 	<fuseaction name="loop">
-		<loop from="1" to="15" index="$i">
+		<include template="dspHeaderLoop.php"/>
+		<loop from="1" to="10" index="$i">
 			<include template="dspLoop.php"/>
 		</loop>       
     </fuseaction>
