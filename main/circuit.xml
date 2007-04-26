@@ -8,5 +8,12 @@
 		<include template="dspIndex.php"/>       
     </fuseaction>
 	
+	<fuseaction name="header">
+		<include template="dspHeader.php"/>       
+    </fuseaction>
+    
+    <fuseaction name="footer">
+		<include template="dspFooter.php"/>       
+    </fuseaction>
 	
 </circuit>

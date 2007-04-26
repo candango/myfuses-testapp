@@ -47,11 +47,10 @@
 
 	<globalfuseactions>
 		<preprocess>
-            <!--  <do action="main.header"/>
-			<do action="main.menu"/> -->
+			<do action="main.header"/>
 		</preprocess>
-		<postprocess>	
-			<!-- <do action="main.footer"/> -->
+		<postprocess>
+			<do action="main.footer"/>
 		</postprocess>
 	</globalfuseactions>
 	
