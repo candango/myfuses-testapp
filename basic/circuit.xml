@@ -5,6 +5,14 @@
 		<include template="dspInclude.php"/>
     </fuseaction>
 	
+	<fuseaction name="do">
+		<do action="actionToDo"/>
+    </fuseaction>
+	
+	<fuseaction name="actionToDo">
+		<include template="dspDo.php"/>
+    </fuseaction>
+		
 	<fuseaction name="if">
 		<xfa name="goToMyself" value="if"/>
 		<if condition="isset($_GET[ 'pessoa' ])">

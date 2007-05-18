@@ -2,6 +2,7 @@
 <circuit access="public">
 	
 	<fuseaction name="menu">
+		<xfa name="goToDo" value="basic.do" />
 		<xfa name="goToInclude" value="basic.include" />
 		<xfa name="goToIf" value="basic.if" />
 		<xfa name="goToLoop" value="basic.loop" />

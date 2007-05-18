@@ -2,12 +2,8 @@
 class TestPlugin extends AbstractPlugin {
     
     public function run() {
-       if ( $this->getPhase() == Plugin::PRE_FUSEACTION_PHASE ) {
-           var_dump( "inicio" );
-       }
-       if ( $this->getPhase() == Plugin::POST_FUSEACTION_PHASE ) {
-           var_dump( "fim" );
-       }
+        $circuit = MyFuses::getInstance()->getRequest()->getAction()->getCircuit();
+        echo $this->buildTrack( $circuit ) . "." . MyFuses::getInstance()->getRequest()->getAction()->getName() ;
     }
     
     private function buildTrack( Circuit $circuit ) {
