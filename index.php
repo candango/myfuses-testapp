@@ -1,6 +1,9 @@
 <?php
 require_once 'myfuses/MyFuses.class.php';
 
-$myFuses = MyFuses::getInstance( "TestApp" );
+// creating new iflux instance
+$myFuses = MyFuses::getInstance();
+
+$myFuses->createApplication( "TestApp" );
 
 $myFuses->doProcess();
