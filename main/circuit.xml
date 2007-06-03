@@ -2,7 +2,7 @@
 <circuit access="public" xmlns:test="test/">
 	
 	<fuseaction name="menu">
-		<test:buga value="&lt;buga:sadf sadf ::" />
+		<test:buga value="Michael ve o circuit.xml do circuit main orea!!!" />
 		<xfa name="goToDo" value="basic.do" />
 		<xfa name="goToInclude" value="basic.include" />
 		<xfa name="goToIf" value="basic.if" />
