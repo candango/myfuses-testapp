@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<circuit access="public">
+<circuit access="public" xmlns:test="test/">
 	
 	<fuseaction name="menu">
+		<test:buga value="&lt;buga:sadf sadf ::" />
 		<xfa name="goToDo" value="basic.do" />
 		<xfa name="goToInclude" value="basic.include" />
 		<xfa name="goToIf" value="basic.if" />
 		<xfa name="goToLoop" value="basic.loop" />
-		<include template="dspIndex.php"/>       
+		
+		<include template="dspIndex.php"/>
     </fuseaction>
 	
 	<fuseaction name="header">
