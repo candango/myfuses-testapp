@@ -1,5 +1,5 @@
 <?php
-class BugaVerb extends AbstractVerb {
+class TestBugaVerb extends AbstractVerb {
     
     private $value;
     
@@ -12,12 +12,13 @@ class BugaVerb extends AbstractVerb {
     }
     
     public function getData() {
-        $data[ "name" ] = "test:buga";
+        $data = parent::getData();
         $data[ "attributes" ][ "value" ] = $this->getValue();
         return $data;
     }
     
     public function setData( $data ) {
+        parent::setData( $data );
         $this->setValue( $data[ "attributes" ][ "value" ] );
     }
 
@@ -32,19 +33,6 @@ class BugaVerb extends AbstractVerb {
         $strOut .= "var_dump( \""  . 
             $this->getValue() .  "\");\n\n";
         return $strOut; 
-    }
-
-    /**
-     * Return the parsed comments
-     *
-     * @return string
-     */
-    public function getComments( $identLevel ) {
-        $strOut = parent::getComments( $identLevel );
-        $strOut = str_replace( "__COMMENT__",
-        "MyFuses:request:action:teste:buga name=\"" . $this->getName() .
-        "\" value=\"" . $this->getValue() . "\"", $strOut );
-        return $strOut;
     }
     
 }

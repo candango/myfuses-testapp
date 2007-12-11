@@ -1,5 +1,5 @@
 <?php
-class TestPlugin extends AbstractPlugin {
+class TestBugaPlugin extends AbstractPlugin {
     
     public function run() {
         $circuit = MyFuses::getInstance()->getRequest()->getAction()->getCircuit();

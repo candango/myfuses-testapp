@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <circuit access="public" xmlns:test="test/">
 	
+	<prefuseaction>
+	   <do action="header" />
+	</prefuseaction>
+	
+	<postfuseaction>
+	   <do action="footer" />
+	</postfuseaction>
+	
 	<fuseaction name="menu">
 		<test:buga value="Michael ve o circuit.xml do circuit main orea!!!" />
 		<xfa name="goToDo" value="basic.do" />
