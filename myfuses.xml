@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE fusebox PUBLIC "-//IFLUX//DTD FUSEBOX 4.1 Strict//EN"
-    "http://iflux.org/xml/ifbox/dtd/ifbox.dtd">
+<!DOCTYPE myfuses PUBLIC "-//MYFUSES//DTD MYFUSES 1.0 Strict//EN"
+    "http://www.candango.org/myfuses/dtd/myfuses.dtd">
 <!-- $Id: fusebox.xml,v 1.6 2006/03/15 19:46:42 piraz Exp $ -->
 <!--
     All circuits, classes, lexicons, parameters, globalfuseactions and plugins 
@@ -11,7 +11,7 @@
         http://sourceforge.net/projects/phpfb4/
     @author: Flavio Garcia flavio@viacerrado.com
 -->
-<fusebox>	
+<myfuses>
 	<circuits>
 		<circuit alias="main" path="main/" parent="" />
 		<circuit alias="basic" path="basic/" parent="main" />
@@ -21,12 +21,6 @@
     <classes>
         <class alias="Account" classpath="classes/Account.class.php" />
     </classes>
-    
-    
-    <lexicons>
-        <lexicon namespace="" path=""/>
-    </lexicons>
-    
     
 	<parameters>
         <parameter name="fuseactionVariable" value="fuseaction" />
@@ -72,4 +66,4 @@
 		</phase>
 	</plugins>
 
-</fusebox>
+</myfuses>
