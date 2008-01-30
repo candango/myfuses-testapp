@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<circuit access="public">
+<!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
+    "http://www.candango.org/myfuses/dtd/circuit.dtd">
+<circuit access="public"
+	xmlns:debug="{MyFuses::MYFUSES_ROOT_PATH}core/verbs/debug/">
 	
 	<fuseaction name="include">
 		<include template="dspInclude.php"/>
@@ -12,6 +15,20 @@
 	<fuseaction name="actionToDo">
 		<include template="dspDo.php"/>
     </fuseaction>
+	
+	<fuseaction name="instantiateInvoke">
+		<include file="dspInstantiate.php"/>
+		<instantiate class="Account" object="account" >
+			<argument value="tgreets" />
+		</instantiate>
+		<invoke object="account" method="getName" returnvariable="login"/>
+		<include file="dspInvoke.php"/>
+		<invoke object="account" method="setName" >
+			<argument value="rmark"/>
+		</invoke>
+		<invoke object="account" method="getName" returnvariable="login"/>
+		<include file="dspInvoke.php"/>
+	</fuseaction>
 		
 	<fuseaction name="if">
 		<xfa name="goToMyself" value="if"/>
@@ -36,8 +53,6 @@
 	<fuseaction name="footer" >
 		<xfa name="backtoMenu" value="main.menu" />
 		<include file="dspFooter.php" />
-		<instantiate class="Account" object="account" arguments="'piraz'" />
-		<invoke object="account" methodcall="getName()" />
 		
 	</fuseaction>
 	
