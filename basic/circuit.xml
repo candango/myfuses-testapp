@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
     "http://www.candango.org/myfuses/dtd/circuit.dtd">
-<circuit access="public"
-	xmlns:debug="{MyFuses::MYFUSES_ROOT_PATH}core/verbs/debug/">
+<circuit access="public">
 	
 	<fuseaction name="include">
 		<include template="dspInclude.php"/>
@@ -31,13 +30,13 @@
 	</fuseaction>
 		
 	<fuseaction name="if">
-		<xfa name="goToMyself" value="if"/>
+		<xfa name="goToMyself" value="#$acao#"/>
 		<if condition="isset($_GET[ 'pessoa' ])">
 			<true>
-				<set name="status" value="true" />
+				<set name="status" value="#true#" />
 			</true>
 			<false>
-				<set name="status" value="false" />
+				<set name="status" value="#false#" />
 			</false>
 		</if>
 		<include template="dspIf.php"/>    
