@@ -18,8 +18,8 @@
 		<include template="dspIndex.php"/>
     </fuseaction>
 	
-	<fuseaction name="teste" class="TesteAction" 
-		path="actions/TesteAction.class.php"/>
+	<fuseaction name="test" class="TestAction" 
+		path="actions/TestAction.class.php"/>
 		
 	
 	<fuseaction name="header">
