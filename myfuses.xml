@@ -41,16 +41,13 @@
 
 	<globalfuseactions>
 		<preprocess>
-			<do action="main.header"/>
 		</preprocess>
 		<postprocess>
-			<do action="main.footer"/>
 		</postprocess>
 	</globalfuseactions>
 	
 	<plugins>
 		<phase name="preProcess">
-            
 		</phase>
 		<phase name="preFuseaction">
 		</phase>

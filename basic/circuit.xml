@@ -30,7 +30,7 @@
 	</fuseaction>
 		
 	<fuseaction name="if">
-		<xfa name="goToMyself" value="#$acao#"/>
+		<xfa name="goToMyself" value="if"/>
 		<if condition="isset($_GET[ 'pessoa' ])">
 			<true>
 				<set name="status" value="#true#" />
