@@ -3,6 +3,6 @@
 <?if( $status ){?>
 <a href="<?=MyFuses::getMySelfXfa( "goToMyself" )?>">Switch Status</a>
 <?}else{?>
-<a href="<?=MyFuses::getMySelfXfa( "goToMyself" )?>&pessoa=1">Switch Status</a>
+<a href="<?=MyFuses::getMySelfXfa( "goToMyself", true, false )?>pessoa=1">Switch Status</a>
 <?}?>
-<br> 
+<br>

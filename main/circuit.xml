@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<circuit access="public" xmlns:test="test/">
+<circuit access="public" xmlns:test="test/" test:security="enabled">
 	
 	<prefuseaction>
 	   <do action="header" />
@@ -10,14 +10,17 @@
 	</postfuseaction>
 	
 	<fuseaction name="menu">
-		<test:buga value="Michael ve o circuit.xml do circuit main orea!!!" />
 		<xfa name="goToDo" value="basic.do" />
 		<xfa name="goToInclude" value="basic.include" />
+		<xfa name="goToInstantiateInvoke" value="basic.instantiateInvoke" />
 		<xfa name="goToIf" value="basic.if" />
 		<xfa name="goToLoop" value="basic.loop" />
-		
 		<include template="dspIndex.php"/>
     </fuseaction>
+	
+	<fuseaction name="teste" class="TesteAction" 
+		path="actions/TesteAction.class.php"/>
+		
 	
 	<fuseaction name="header">
 		<include template="dspHeader.php"/>       
@@ -26,5 +29,5 @@
     <fuseaction name="footer">
 		<include template="dspFooter.php"/>       
     </fuseaction>
-	
+		
 </circuit>

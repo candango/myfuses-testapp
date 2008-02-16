@@ -1,5 +1,5 @@
 <?php
-function microtime_float() {
+/*function microtime_float() {
     list($usec, $sec) = explode(" ", microtime());
     return ((float)$usec + (float)$sec);
 }
@@ -10,7 +10,7 @@ function get_mem_usage() {
 
 $time = microtime_float();
 
-var_dump( get_mem_usage() );
+var_dump( get_mem_usage() );*/
 
 require_once 'myfuses/MyFuses.class.php';
 
@@ -20,7 +20,7 @@ $myFuses = MyFuses::getInstance();
 $myFuses->createApplication( "TestApp" );
 
 $myFuses->doProcess();
-
+/*
 var_dump( get_mem_usage() );
 
-var_dump( microtime_float() - $time );
+var_dump( microtime_float() - $time );*/

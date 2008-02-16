@@ -26,7 +26,7 @@
         <parameter name="fuseactionVariable" value="fuseaction" />
         <parameter name="defaultFuseaction" value="main.menu" />
         <parameter name="precedenceFormOrUrl" value="form"/>
-        <parameter name="mode" value="production"/>
+        <parameter name="mode" value="development"/>
         <parameter name="password" value=""/>
         <parameter name="parseWithComments" value="true" />
         <parameter name="conditionalParse" value="true" />

@@ -8,7 +8,6 @@ class Account {
     }
     
     public function getName() {
-        var_dump($this->name);
         return $this->name;
     }
     

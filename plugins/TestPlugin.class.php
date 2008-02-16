@@ -1,7 +1,8 @@
 <?php
-class TestBugaPlugin extends AbstractPlugin {
+class TestPlugin extends AbstractPlugin {
     
     public function run() {
+        $action = MyFuses::getInstance()->getCurrentAction();
         $circuit = MyFuses::getInstance()->getRequest()->getAction()->getCircuit();
         echo $this->buildTrack( $circuit ) . "." . MyFuses::getInstance()->getRequest()->getAction()->getName() ;
     }
