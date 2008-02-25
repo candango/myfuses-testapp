@@ -23,20 +23,25 @@
     </classes>
     
 	<parameters>
-        <parameter name="fuseactionVariable" value="fuseaction" />
         <parameter name="defaultFuseaction" value="main.menu" />
-        <parameter name="precedenceFormOrUrl" value="form"/>
-        <parameter name="mode" value="development"/>
-        <parameter name="password" value=""/>
+        <!-- you may want to change this to development mode: -->
+        <parameter name="mode" value="production" />
+        <!-- change this to something more secure: -->
+        <parameter name="password" value="testApp" />
+        <!--
+            These are all default values that can be overridden:
+        <parameter name="fuseactionVariable" value="fuseaction" />
+        <parameter name="precedenceFormOrUrl" value="form" />
+        <parameter name="scriptFileDelimiter" value="php" />
+        <parameter name="maskedFileDelimiters" value="htm,cfm,cfml,php,php4,asp,aspx" />
+        <paramater name="strictMode" value="false" />
+        <parameter name="allowImplicitCircuits" value="false" />
+        -->
         <parameter name="parseWithComments" value="true" />
-        <parameter name="conditionalParse" value="true" />
-        <parameter name="allowLexicon" value="true" />
-        <parameter name="ignoreBadGrammar" value="true"/>
-        <parameter name="useAssertions" value="true" />
-        <parameter name="scriptLanguage" value="php5" />
-        <parameter name="scriptFileDelimiter" value="php"/>
-        <parameter name="maskedFileDelimiters" value="htm,cfm,cfml,php,php4,asp,aspx,class,inc"/>
+        
         <parameter name="characterEncoding" value="iso-8859-1"/>
+        
+        <parameter name="debug" value="true"/>
 	</parameters> 
 
 	<globalfuseactions>
