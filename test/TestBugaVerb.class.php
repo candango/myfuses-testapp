@@ -28,11 +28,10 @@ class TestBugaVerb extends AbstractVerb {
      * @return string
      */
     public function getParsedCode( $commented, $identLevel ) {
-        $strOut = parent::getParsedCode( $commented, $identLevel );
+        /*$strOut = parent::getParsedCode( $commented, $identLevel );
         $strOut .= str_repeat( "\t", $identLevel );
-        $strOut .= "var_dump( \""  . 
-            $this->getValue() .  "\");\n\n";
-        return $strOut; 
+        $strOut .= "var_dump( MyFuses::getCurrentCircuit()->getCustomAttribute( 'test', 'security' )  );die();\n\n";
+        return $strOut;*/ 
     }
     
 }

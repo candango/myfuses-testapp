@@ -25,7 +25,7 @@
 	<parameters>
         <parameter name="defaultFuseaction" value="main.menu" />
         <!-- you may want to change this to development mode: -->
-        <parameter name="mode" value="production" />
+        <parameter name="mode" value="development" />
         <!-- change this to something more secure: -->
         <parameter name="password" value="testApp" />
         <!--
@@ -37,11 +37,13 @@
         <paramater name="strictMode" value="false" />
         <parameter name="allowImplicitCircuits" value="false" />
         -->
-        <parameter name="parseWithComments" value="true" />
+        <parameter name="parseWithComments" value="false" />
         
         <parameter name="characterEncoding" value="iso-8859-1"/>
         
         <parameter name="debug" value="true"/>
+        
+        <parameter name="tools" value="false"/>
 	</parameters> 
 
 	<globalfuseactions>

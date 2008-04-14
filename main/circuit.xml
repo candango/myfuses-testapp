@@ -10,6 +10,7 @@
 	</postfuseaction>
 	
 	<fuseaction name="menu">
+	    <test:buga value="buuu"/>
 		<xfa name="goToDo" value="basic.do" />
 		<xfa name="goToInclude" value="basic.include" />
 		<xfa name="goToInstantiateInvoke" value="basic.instantiateInvoke" />

@@ -4,7 +4,7 @@
 <circuit access="public">
 	
 	<fuseaction name="include">
-		<include template="dspInclude.php"/>
+		<include file="dspInclude.php"/>
     </fuseaction>
 	
 	<fuseaction name="do">
@@ -30,7 +30,7 @@
 	</fuseaction>
 		
 	<fuseaction name="if">
-		<xfa name="goToMyself" value="if"/>
+	    <xfa name="goToMyself" value="if"/>
 		<if condition="isset($_GET[ 'pessoa' ])">
 			<true>
 				<set name="status" value="#true#" />
@@ -52,7 +52,6 @@
 	<fuseaction name="footer" >
 		<xfa name="backtoMenu" value="main.menu" />
 		<include file="dspFooter.php" />
-		
 	</fuseaction>
 	
 	<fuseaction name="header" >
