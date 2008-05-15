@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
+    "http://www.candango.org/myfuses/dtd/circuit.dtd">
+<circuit access="public">
+	
+	<fuseaction name="json">
+	    
+	    
+	    
+		<include template="dspJson.php"/>
+    </fuseaction>
+	
+</circuit>
