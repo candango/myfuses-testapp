@@ -16,6 +16,7 @@
 		<xfa name="goToInstantiateInvoke" value="basic.instantiateInvoke" />
 		<xfa name="goToIf" value="basic.if" />
 		<xfa name="goToLoop" value="basic.loop" />
+		<xfa name="goToSwitch" value="basic.switch" />
 		<include template="dspIndex.php"/>
     </fuseaction>
 	
