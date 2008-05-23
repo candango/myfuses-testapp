@@ -42,6 +42,25 @@
 		<include template="dspIf.php"/>    
     </fuseaction>
 	
+	<fuseaction name="switch">
+        <xfa name="goToMyself" value="switch"/>
+        <switch condition="$_GET[ 'value' ]" >
+            <case value="1" break="true">
+                <set name="status" value="Value 1 switched" />
+            </case>
+            <case value="2" break="true">
+                <set name="status" value="Value 2 switched" />
+            </case>
+            <case value="3" break="true">
+                <set name="status" value="Value 3 switched" />
+            </case>
+            <default break="true">
+                <set name="status" value="Choose one value" />
+            </default>
+        </switch>
+        <include template="dspSwitch.php"/>
+    </fuseaction>
+	
 	<fuseaction name="loop">
 		<include template="dspHeaderLoop.php"/>
 		<loop from="1" to="10" index="$i">
