@@ -1,5 +1,4 @@
 <?php
-ob_clean();
 require_once "classes/Entity.class.php";
 
 $data = new Entity();
@@ -21,15 +20,3 @@ for( $i = 0; $i < 10; $i++ ) {
 }
 
 $data->setItems( $items );
-
-$data = MyFusesJsonUtil::toJson( $data );
-
-
-
-var_dump( MyFusesJsonUtil::fromJson( $data ) );die();
-
-
-
-//$xml = MyFusesXmlUtil::toXml( $data );
-
-//var_dump( MyFusesXmlUtil::fromXml( $xml ) );die();

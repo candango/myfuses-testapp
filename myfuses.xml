@@ -15,7 +15,6 @@
 	<circuits>
 		<circuit alias="main" path="main/" parent="" />
 		<circuit alias="basic" path="basic/" parent="main" />
-		<circuit alias="rest" path="rest/" parent="main" />
 	</circuits>
     
     
@@ -38,7 +37,7 @@
         <paramater name="strictMode" value="false" />
         <parameter name="allowImplicitCircuits" value="false" />
         -->
-        <parameter name="parseWithComments" value="false" />
+        <parameter name="parseWithComments" value="true" />
         
         <parameter name="characterEncoding" value="iso-8859-1"/>
         
@@ -56,7 +55,7 @@
 	
 	<plugins>
 		<phase name="preProcess">
-            <plugin name="Test" />
+            <plugin name="BreadCrumb" />
 		</phase>
 		<phase name="preFuseaction">
 		</phase>
