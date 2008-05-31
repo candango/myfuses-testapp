@@ -9,8 +9,18 @@
 	    <data:toJson value="#$data#" clean="true"/>
     </fuseaction>
 	
+	<fuseaction name="json">
+	    <xfa name="getJsonData" value="toJson"/>
+        <data:fromJson name="data" xfa="getJsonData"/>
+        <do action="showData" />
+    </fuseaction>
+	
 	<fuseaction name="xml">
         <include template="dspJson.php"/>
     </fuseaction>
+	
+	<fuseaction name="showData">
+	   <include template="dspData.php"/>
+	</fuseaction>
 	
 </circuit>
