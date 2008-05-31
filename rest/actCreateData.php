@@ -1,6 +1,4 @@
 <?php
-require_once "classes/Entity.class.php";
-
 $data = new Entity();
 
 $data->setName( "Entity 1" );

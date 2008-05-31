@@ -5,11 +5,13 @@
     xmlns:data="core/verbs/data/">
 	
 	<fuseaction name="toJson">
-        <include template="actCreateData.php"/>
+        <do action="includeDependencies" />
+        <do action="createData" />
 	    <data:toJson value="#$data#" clean="true"/>
     </fuseaction>
 	
 	<fuseaction name="json">
+	    <do action="includeDependencies" />
 	    <xfa name="getJsonData" value="toJson"/>
         <data:fromJson name="data" xfa="getJsonData"/>
         <do action="showData" />
@@ -22,5 +24,13 @@
 	<fuseaction name="showData">
 	   <include template="dspData.php"/>
 	</fuseaction>
+	
+	<fuseaction name="includeDependencies">
+       <include template="actIncludeDependencies.php"/>
+    </fuseaction>
+	
+	<fuseaction name="createData">
+       <include template="actCreateData.php"/>
+    </fuseaction>
 	
 </circuit>
