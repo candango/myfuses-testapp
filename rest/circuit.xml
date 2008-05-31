@@ -33,4 +33,13 @@
        <include template="actCreateData.php"/>
     </fuseaction>
 	
+	<prefuseaction>
+        <include file="dspHeader.php" />
+    </prefuseaction>
+    
+    <postfuseaction>
+        <xfa name="backtoMenu" value="main.menu" />
+        <include file="dspFooter.php" />
+    </postfuseaction>
+	
 </circuit>
