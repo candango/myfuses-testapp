@@ -14,3 +14,7 @@ MyFuses::getMySelfXfa( "goToDo" );
 	<li><a href="<?=MyFuses::getMySelfXfa( "goToLoop" )?>">Loop</a></li>
 	<li><a href="<?=MyFuses::getMySelfXfa( "goToSwitch" )?>">Switch</a></li>
 </ul>
+<h3>REST</h3>
+<ul>
+    <li><a href="<?=MyFuses::getMySelfXfa( "goToJson" )?>">Json</a></li>
+</ul>

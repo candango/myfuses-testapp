@@ -17,6 +17,8 @@
 		<xfa name="goToIf" value="basic.if" />
 		<xfa name="goToLoop" value="basic.loop" />
 		<xfa name="goToSwitch" value="basic.switch" />
+		
+		<xfa name="goToJson" value="rest.json" />
 		<include template="dspIndex.php"/>
     </fuseaction>
 	
