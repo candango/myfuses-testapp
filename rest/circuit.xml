@@ -10,6 +10,12 @@
 	    <data:toJson value="#$data#" clean="true"/>
     </fuseaction>
 	
+	<fuseaction name="toXml">
+        <do action="includeDependencies" />
+        <do action="createData" />
+        <data:toXml value="#$data#" clean="true"/>
+    </fuseaction>
+	
 	<fuseaction name="json">
 	    <do action="includeDependencies" />
 	    <xfa name="getJsonData" value="toJson"/>
