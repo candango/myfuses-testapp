@@ -24,7 +24,10 @@
     </fuseaction>
 	
 	<fuseaction name="xml">
-        <include template="dspJson.php"/>
+        <do action="includeDependencies" />
+        <xfa name="getXmlData" value="toXml"/>
+        <data:fromXml name="data" xfa="getXmlData"/>
+        <do action="showData" />
     </fuseaction>
 	
 	<fuseaction name="showData">
