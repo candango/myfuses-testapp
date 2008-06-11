@@ -18,8 +18,7 @@
 	
 	<fuseaction name="json">
 	    <do action="includeDependencies" />
-	    <xfa name="getJsonData" value="toJson"/>
-        <data:fromJson name="data" xfa="getJsonData"/>
+	    <xfa name="getData" value="toJson"/>
         <do action="showData">
             <parameter name="exampleName" value="Json Example" />
             <parameter name="verbName" value="data:fromJson" />
@@ -35,6 +34,16 @@
     </fuseaction>
 	
 	<fuseaction name="showData">
+	   <switch condition="$dataType">
+	       <case value="json">
+	           <data:fromJson name="data" xfa="getData"/>
+	       </case>
+	       <case value="xml">
+               <data:fromJson name="data" xfa="getData"/>
+           </case>
+           <default/>
+	   </switch>
+	   
 	   <include template="dspData.php"/>
 	</fuseaction>
 	

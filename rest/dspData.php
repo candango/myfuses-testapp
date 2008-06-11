@@ -17,5 +17,5 @@
 </table>
 <p>This example uses the <?=$verbName?> verb to get <?=$dataType?> data from an url.
 The action that produces the <?=$dataType?> data is 
-<a href="<?=MyFuses::getMySelfXfa("getJsonData")?>" target="_blank">
+<a href="<?=MyFuses::getMySelfXfa("getData")?>" target="_blank">
 rest.toJson</a></p>
