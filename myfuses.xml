@@ -21,6 +21,7 @@
     
     <classes>
         <class alias="Account" classpath="classes/Account.class.php" />
+        <class alias="Entity" classpath="classes/Entity.class.php" />
     </classes>
     
 	<parameters>
