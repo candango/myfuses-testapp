@@ -20,7 +20,11 @@
 	    <do action="includeDependencies" />
 	    <xfa name="getJsonData" value="toJson"/>
         <data:fromJson name="data" xfa="getJsonData"/>
-        <do action="showData" />
+        <do action="showData">
+            <parameter name="exampleName" value="Json Example" />
+            <parameter name="verbName" value="data:fromJson" />
+            <parameter name="dataType" value="json" />
+        </do>
     </fuseaction>
 	
 	<fuseaction name="xml">
