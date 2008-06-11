@@ -52,7 +52,37 @@
     </fuseaction>
 	
 	<fuseaction name="createData">
-       <include template="actCreateData.php"/>
+       <instantiate class="Entity" object="data" />
+       <invoke object="data" method="setName" >
+           <argument value="Entity 1"/>
+       </invoke>
+       
+       <invoke object="data" method="setValue" >
+           <argument value="Value 1"/>
+       </invoke>
+       
+       <set name="items" value="#array()#" />
+       
+       <loop from="0" to="10" index="$i" >
+           
+           <instantiate class="Entity" object="item" />
+		   
+		   <invoke object="item" method="setName" >
+		       <argument value="Entity 1 - #$i#"/>
+		   </invoke>
+		       
+		   <invoke object="item" method="setValue" >
+		       <argument value="Value 1 - #$i#"/>
+		   </invoke>
+           
+           <set value="#array_push( $items, $item )#" />
+               
+       </loop>
+       
+       <invoke object="data" method="setItems" >
+            <argument value="#$items#"/>
+       </invoke>
+       
     </fuseaction>
 	
 	<prefuseaction>
