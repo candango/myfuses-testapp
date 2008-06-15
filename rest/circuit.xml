@@ -20,17 +20,22 @@
 	    <do action="includeDependencies" />
 	    <xfa name="getData" value="toJson"/>
         <do action="showData">
-            <parameter name="exampleName" value="Json Example" />
+            <parameter name="exampleName" value="JSON Example" />
             <parameter name="verbName" value="data:fromJson" />
             <parameter name="dataType" value="json" />
+            <parameter name="actName" value="rest.toJson" />
         </do>
     </fuseaction>
 	
 	<fuseaction name="xml">
         <do action="includeDependencies" />
-        <xfa name="getXmlData" value="toXml"/>
-        <data:fromXml name="data" xfa="getXmlData"/>
-        <do action="showData" />
+        <xfa name="getData" value="toXml"/>
+        <do action="showData">
+            <parameter name="exampleName" value="XML Example" />
+            <parameter name="verbName" value="data:fromXml" />
+            <parameter name="dataType" value="xml" />
+            <parameter name="actName" value="rest.toXml" />
+        </do>
     </fuseaction>
 	
 	<fuseaction name="showData">
@@ -39,7 +44,7 @@
 	           <data:fromJson name="data" xfa="getData"/>
 	       </case>
 	       <case value="xml">
-               <data:fromJson name="data" xfa="getData"/>
+               <data:fromXml name="data" xfa="getData"/>
            </case>
            <default/>
 	   </switch>
