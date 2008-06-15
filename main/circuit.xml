@@ -19,6 +19,8 @@
 		<xfa name="goToSwitch" value="basic.switch" />
 		
 		<xfa name="goToJson" value="rest.json" />
+		<xfa name="goToXml" value="rest.xml" />
+		
 		<include template="dspIndex.php"/>
     </fuseaction>
 	

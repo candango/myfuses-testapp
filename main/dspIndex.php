@@ -17,4 +17,5 @@ MyFuses::getMySelfXfa( "goToDo" );
 <h3>REST</h3>
 <ul>
     <li><a href="<?=MyFuses::getMySelfXfa( "goToJson" )?>">Json</a></li>
+    <li><a href="<?=MyFuses::getMySelfXfa( "goToXml" )?>">Xml</a></li>
 </ul>
