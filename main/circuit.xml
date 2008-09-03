@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<circuit access="public" xmlns:test="test/" test:security="enabled">
+	
+	<prefuseaction>
+	   <do action="header" />
+	</prefuseaction>
+	
+	<postfuseaction>
+	   <do action="footer" />
+	</postfuseaction>
+	
+	<fuseaction name="menu">
+	    <test:buga value="buuu"/>
+		<xfa name="goToDo" value="basic.do" />
+		<xfa name="goToInclude" value="basic.include" />
+		<xfa name="goToInstantiateInvoke" value="basic.instantiateInvoke" />
+		<xfa name="goToIf" value="basic.if" />
+		<xfa name="goToLoop" value="basic.loop" />
+		<xfa name="goToSwitch" value="basic.switch" />
+		
+		<xfa name="goToJson" value="rest.json" />
+		<xfa name="goToXml" value="rest.xml" />
+		
+		<include template="dspIndex.php"/>
+    </fuseaction>
+	
+	<fuseaction name="test" class="TestAction" 
+		path="actions/TestAction.class.php"/>
+		
+	
+	<fuseaction name="header">
+		<include template="dspHeader.php"/>       
+    </fuseaction>
+    
+    <fuseaction name="footer">
+		<include template="dspFooter.php"/>       
+    </fuseaction>
+		
+</circuit>

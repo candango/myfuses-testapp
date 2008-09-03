@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
+    "http://www.candango.org/myfuses/dtd/circuit.dtd">
+<circuit access="public"
+    xmlns:data="core/verbs/data/">
+	
+	<fuseaction name="toJson">
+        <do action="includeDependencies" />
+        <do action="createData" />
+	    <data:toJson value="#$data#" clean="true"/>
+    </fuseaction>
+	
+	<fuseaction name="toXml">
+        <do action="includeDependencies" />
+        <do action="createData" />
+        <data:toXml value="#$data#" clean="true"/>
+    </fuseaction>
+	
+	<fuseaction name="json">
+	    <do action="includeDependencies" />
+	    <xfa name="getData" value="toJson"/>
+        <do action="showData">
+            <parameter name="exampleName" value="JSON Example" />
+            <parameter name="verbName" value="data:fromJson" />
+            <parameter name="dataType" value="json" />
+            <parameter name="actName" value="rest.toJson" />
+        </do>
+    </fuseaction>
+	
+	<fuseaction name="xml">
+        <do action="includeDependencies" />
+        <xfa name="getData" value="toXml"/>
+        <do action="showData">
+            <parameter name="exampleName" value="XML Example" />
+            <parameter name="verbName" value="data:fromXml" />
+            <parameter name="dataType" value="xml" />
+            <parameter name="actName" value="rest.toXml" />
+        </do>
+    </fuseaction>
+	
+	<fuseaction name="showData">
+	   <switch condition="$dataType">
+	       <case value="json">
+	           <data:fromJson name="data" xfa="getData"/>
+	       </case>
+	       <case value="xml">
+               <data:fromXml name="data" xfa="getData"/>
+           </case>
+           <default/>
+	   </switch>
+	   
+	   <include template="dspData.php"/>
+	</fuseaction>
+	
+	<fuseaction name="includeDependencies">
+       <include template="actIncludeDependencies.php"/>
+    </fuseaction>
+	
+	<fuseaction name="createData">
+       <instantiate class="Entity" object="data" />
+       <invoke object="data" method="setName" >
+           <argument value="Entity 1"/>
+       </invoke>
+       
+       <invoke object="data" method="setValue" >
+           <argument value="Value 1"/>
+       </invoke>
+       
+       <set name="items" value="#array()#" />
+       
+       <loop from="0" to="10" index="$i" >
+           
+           <instantiate class="Entity" object="item" />
+		   
+		   <invoke object="item" method="setName" >
+		       <argument value="Entity 1 - #$i#"/>
+		   </invoke>
+		       
+		   <invoke object="item" method="setValue" >
+		       <argument value="Value 1 - #$i#"/>
+		   </invoke>
+           
+           <set value="#array_push( $items, $item )#" />
+               
+       </loop>
+       
+       <invoke object="data" method="setItems" >
+            <argument value="#$items#"/>
+       </invoke>
+       
+    </fuseaction>
+	
+	<prefuseaction>
+        <include file="dspHeader.php" />
+    </prefuseaction>
+    
+    <postfuseaction>
+        <xfa name="backtoMenu" value="main.menu" />
+        <include file="dspFooter.php" />
+    </postfuseaction>
+	
+</circuit>

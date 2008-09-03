@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<circuit access="public">
+	
+	<fuseaction name="showAcount">
+		<xfa name="goToLoop" value="basic.loop" />
+		<include template="dspIndex.php"/>
+    </fuseaction>
+	
+	
+</circuit>
