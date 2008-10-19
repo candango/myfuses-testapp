@@ -1,3 +1,4 @@
-<h1>MyFuses Test Application</h1>
+<h1><?=__( "MYFUSES_TEST_APPLICATION" )?></h1>
 
 <p><?=$breadCrumb?></p>
+

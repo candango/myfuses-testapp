@@ -2,7 +2,7 @@
 MyFuses::getMySelfXfa( "goToDo" );
 ?>
 
-<h2>Menu</h2>
+<h2><?=__( "MENU" )?></h2>
 
 <h3>Basic</h3>
 <ul>
