@@ -2,20 +2,20 @@
 MyFuses::getMySelfXfa( "goToDo" );
 ?>
 
-<h2><?=__( "MENU" )?></h2>
+<h2><?=myexp( "MENU" )?></h2>
 
 <h3>Basic</h3>
 <ul>
-	<li><a href="<?=MyFuses::getMySelfXfa( "goToDo" )?>">Do</a></li>
-	<li><a href="<?=MyFuses::getMySelfXfa( "goToInstantiateInvoke" )?>">
+	<li><a href="<?=xfa( "goToDo" )?>">Do</a></li>
+	<li><a href="<?=xfa( "goToInstantiateInvoke" )?>">
 	Instantiate and Invoke</a></li>
-	<li><a href="<?=MyFuses::getMySelfXfa( "goToInclude" )?>">Include</a></li>
-	<li><a href="<?=MyFuses::getMySelfXfa( "goToIf" )?>">If</a></li>
-	<li><a href="<?=MyFuses::getMySelfXfa( "goToLoop" )?>">Loop</a></li>
-	<li><a href="<?=MyFuses::getMySelfXfa( "goToSwitch" )?>">Switch</a></li>
+	<li><a href="<?=xfa( "goToInclude" )?>">Include</a></li>
+	<li><a href="<?=xfa( "goToIf" )?>">If</a></li>
+	<li><a href="<?=xfa( "goToLoop" )?>">Loop</a></li>
+	<li><a href="<?=xfa( "goToSwitch" )?>">Switch</a></li>
 </ul>
 <h3>REST</h3>
 <ul>
-    <li><a href="<?=MyFuses::getMySelfXfa( "goToJson" )?>">Json</a></li>
-    <li><a href="<?=MyFuses::getMySelfXfa( "goToXml" )?>">Xml</a></li>
+    <li><a href="<?=xfa( "goToJson" )?>">Json</a></li>
+    <li><a href="<?=xfa( "goToXml" )?>">Xml</a></li>
 </ul>
