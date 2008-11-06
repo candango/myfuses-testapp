@@ -1,4 +1,4 @@
-<h1><?=__( "MYFUSES_TEST_APPLICATION" )?></h1>
+<h1><?=myexp( "MYFUSES_TEST_APPLICATION" )?></h1>
 
 <p><?=$breadCrumb?></p>
 
