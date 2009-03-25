@@ -4,6 +4,10 @@
 <circuit access="public">
     
     <fuseaction name="index" >
+        <do action="showIndex"/>
+    </fuseaction>
+    
+    <fuseaction name="showIndex" >
         <include file="dspIndex.php"/>
     </fuseaction>
     
