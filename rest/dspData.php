@@ -8,12 +8,12 @@
         <th>Name</th>
         <th>Value</th>
     </tr>
-    <?foreach( $data->getItems() as $item ) {?>
+    <?php foreach( $data->getItems() as $item ) {?>
         <tr>
             <td><?=$item->getName()?></td>
             <td><?=$item->getValue()?></td>
         </tr>
-    <?}?>
+    <?php }?>
 </table>
 <p>This example uses the <?=$verbName?> verb to get <?=$dataType?> data from an url.
 The action that produces the <?=$dataType?> data is 
