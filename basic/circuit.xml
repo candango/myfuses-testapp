@@ -4,11 +4,13 @@
 <circuit access="public">
 	
 	<fuseaction name="include">
-		<include file="dspInclude.php"/>
+		<include file="dspInclude.php" contentvariable="content"/>
+		<include file="dspShowContent.php"/>
     </fuseaction>
 	
 	<fuseaction name="do">
-		<do action="actionToDo"/>
+		<do action="actionToDo" contentvariable="content"/>
+		<include file="dspShowContent.php"/>
     </fuseaction>
 	
 	<fuseaction name="actionToDo">
