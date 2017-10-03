@@ -41,7 +41,7 @@
         -->
         <parameter name="parseWithComments" value="true" />
         
-        <parameter name="characterEncoding" value="iso-8859-1"/>
+        <parameter name="characterEncoding" value="utf-8"/>
         
         <parameter name="debug" value="true"/>
         
