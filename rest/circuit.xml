@@ -7,15 +7,15 @@
 	<fuseaction name="toJson">
         <do action="includeDependencies" />
         <do action="createData" />
-	    <data:toJson value="#$data#" clean="true"/>
         <response type="application/json"/>
+	    <data:toJson value="#$data#" clean="true"/>
     </fuseaction>
 	
 	<fuseaction name="toXml">
         <do action="includeDependencies" />
         <do action="createData" />
-        <data:toXml value="#$data#" clean="true"/>
         <response type="text/xml, application/xml"/>
+        <data:toXml value="#$data#" clean="true"/>
     </fuseaction>
 	
 	<fuseaction name="json">
