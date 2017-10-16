@@ -1,0 +1,1 @@
+<h2>Acount(test paramenters argument): <?=$login2?></h2>

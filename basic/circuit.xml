@@ -2,49 +2,55 @@
 <!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
     "http://www.candango.org/myfuses/dtd/circuit.dtd">
 <circuit access="public">
-	
-	<fuseaction name="include">
-		<include file="dspInclude.php" contentvariable="content"/>
-		<include file="dspShowContent.php"/>
+    <fuseaction name="include">
+        <include file="dspInclude.php" contentvariable="content"/>
+        <include file="dspShowContent.php"/>
     </fuseaction>
-	
-	<fuseaction name="do">
-		<do action="actionToDo" contentvariable="content"/>
-		<include file="dspShowContent.php"/>
+
+    <fuseaction name="do">
+        <do action="actionToDo" contentvariable="content"/>
+        <include file="dspShowContent.php"/>
     </fuseaction>
-	
-	<fuseaction name="actionToDo">
-		<include template="dspDo.php"/>
+
+    <fuseaction name="actionToDo">
+        <include template="dspDo.php"/>
     </fuseaction>
-	
-	<fuseaction name="instantiateInvoke">
-		<include file="dspInstantiate.php"/>
-		<instantiate class="Account" object="account" >
-			<argument value="tgreets" />
-		</instantiate>
-		<invoke object="account" method="getName" returnvariable="login"/>
-		<include file="dspInvoke.php"/>
-		<invoke object="account" method="setName" >
-			<argument value="rmark"/>
-		</invoke>
-		<invoke object="account" method="getName" returnvariable="login"/>
-		<include file="dspInvoke.php"/>
-	</fuseaction>
-		
-	<fuseaction name="if">
-	    <xfa name="goToMyself" value="if"/>
-		<if condition="isset($_GET[ 'pessoa' ])">
-			<true>
-				<set name="status" value="#true#" />
-			</true>
-			<false>
-				<set name="status" value="#false#" />
-			</false>
-		</if>
-		<include template="dspIf.php"/>    
+
+    <fuseaction name="instantiateInvoke">
+        <include file="dspInstantiate.php"/>
+        <instantiate class="Account" object="account">
+            <argument value="tgreets" />
+        </instantiate>
+        <invoke object="account" method="getName" returnvariable="login"/>
+        <include file="dspInvoke.php"/>
+        <invoke object="account" method="setName" >
+            <argument value="rmark"/>
+        </invoke>
+        <invoke object="account" method="getName" returnvariable="login"/>
+
+        <include file="dspInvoke.php"/>
+
+        <instantiate class="Account" object="account2" arguments="'test arguments'"/>
+
+        <invoke object="account2" methodcall="getName()" returnvariable="login2"/>
+
+        <include file="dspInvokeTestArguments.php"/>
     </fuseaction>
-	
-	<fuseaction name="switch">
+
+    <fuseaction name="if">
+        <xfa name="goToMyself" value="if"/>
+        <if condition="isset($_GET[ 'pessoa' ])">
+            <true>
+                <set name="status" value="#true#" />
+            </true>
+            <false>
+                <set name="status" value="#false#" />
+            </false>
+        </if>
+        <include template="dspIf.php"/>
+    </fuseaction>
+
+    <fuseaction name="switch">
         <xfa name="goToMyself" value="switch"/>
         <switch condition="$_GET[ 'value' ]" >
             <case value="1" break="true">
@@ -62,29 +68,29 @@
         </switch>
         <include template="dspSwitch.php"/>
     </fuseaction>
-	
-	<fuseaction name="loop">
-		<include template="dspHeaderLoop.php"/>
-		<loop from="1" to="10" index="$i">
-			<include template="dspLoop.php"/>
-		</loop>       
+
+    <fuseaction name="loop">
+        <include template="dspHeaderLoop.php"/>
+        <loop from="1" to="10" index="$i">
+            <include template="dspLoop.php"/>
+        </loop>
     </fuseaction>
-	
-	<fuseaction name="footer" >
-		<xfa name="backtoMenu" value="main.menu" />
-		<include file="dspFooter.php" />
-	</fuseaction>
-	
-	<fuseaction name="header" >
-		<include file="dspHeader.php" />
-	</fuseaction>
-	
-	<prefuseaction>
-		<do action="header" />
-	</prefuseaction>
-	
-	<postfuseaction>
-		<do action="footer" />
-	</postfuseaction>
-	
+
+    <fuseaction name="footer" >
+        <xfa name="backtoMenu" value="main.menu" />
+        <include file="dspFooter.php" />
+    </fuseaction>
+
+    <fuseaction name="header" >
+        <include file="dspHeader.php" />
+    </fuseaction>
+
+    <prefuseaction>
+        <do action="header" />
+    </prefuseaction>
+
+    <postfuseaction>
+        <do action="footer" />
+    </postfuseaction>
+
 </circuit>
