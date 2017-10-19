@@ -1,2 +1,2 @@
 <?php
-require_once "classes/Entity.class.php";
+require_once "classes/Entity.php";

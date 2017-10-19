@@ -12,7 +12,7 @@ $time = microtime_float();
 
 var_dump( get_mem_usage() );*/
 
-require_once 'myfuses/MyFuses.class.php';
+require_once 'myfuses/MyFuses.php';
 
 // creating new iflux instance
 $myFuses = MyFuses::getInstance();
