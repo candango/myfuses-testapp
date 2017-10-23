@@ -50,6 +50,12 @@
         <include template="dspIf.php"/>
     </fuseaction>
 
+    <fuseaction name="set">
+        <set name="avariable" value="The variable value."/>
+        <set name="anarray['index']" value="The array index value."/>
+        <include file="dspSet.php"/>
+    </fuseaction>
+
     <fuseaction name="switch">
         <xfa name="goToMyself" value="switch"/>
         <switch condition="$_GET[ 'value' ]" >

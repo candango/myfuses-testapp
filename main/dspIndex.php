@@ -12,7 +12,8 @@ MyFuses::getMySelfXfa( "goToDo" );
 	<li><a href="<?=xfa( "goToInclude" )?>">Include</a></li>
 	<li><a href="<?=xfa( "goToIf" )?>">If</a></li>
 	<li><a href="<?=xfa( "goToLoop" )?>">Loop</a></li>
-	<li><a href="<?=xfa( "goToSwitch" )?>">Switch</a></li>
+    <li><a href="<?=xfa( "goToSet" )?>">Set</a></li>
+    <li><a href="<?=xfa( "goToSwitch" )?>">Switch</a></li>
 </ul>
 <h3>REST</h3>
 <ul>
