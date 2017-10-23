@@ -53,6 +53,7 @@
     <fuseaction name="set">
         <set name="avariable" value="The variable value."/>
         <set name="anarray['index']" value="The array index value."/>
+        <set name="anarray['index1']" value="return 'The array index1 value with eval.';" evaluate="true"/>
         <include file="dspSet.php"/>
     </fuseaction>
 
