@@ -40,11 +40,12 @@
         <parameter name="allowImplicitCircuits" value="false" />
         -->
         <parameter name="parseWithComments" value="true" />
-        
         <parameter name="characterEncoding" value="utf-8"/>
-        
         <parameter name="debug" value="true"/>
-        
+        <!--
+        <parameter name="rewrite" value="true"/>
+        <parameter name="ignoreFuseactionVariable" value="true"/>
+        -->
         <parameter name="tools" value="false"/>
     </parameters> 
 
