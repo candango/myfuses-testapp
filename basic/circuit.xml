@@ -59,7 +59,7 @@
 
     <fuseaction name="switch">
         <xfa name="goToMyself" value="switch"/>
-        <switch condition="$_GET[ 'value' ]" >
+        <switch condition="isset($_GET['value']) ? $_GET['value'] : 0" >
             <case value="1" break="true">
                 <set name="status" value="Value 1 switched" />
             </case>
