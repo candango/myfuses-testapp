@@ -1,19 +1,29 @@
 <?php
-class BreadCrumbPlugin extends AbstractPlugin {
+
+use Candango\MyFuses\Controller;
+use Candango\MyFuses\Core\AbstractPlugin;
+use Candango\MyFuses\Core\Circuit;
+use Candango\MyFuses\Process\Context;
+
+class BreadCrumbPlugin extends AbstractPlugin
+{
     
-    public function run() {
-        $action = MyFuses::getInstance()->getCurrentAction();
-        $circuit = MyFuses::getInstance()->getRequest()->getAction()->getCircuit();
-        $breadCrumb =  $this->buildTrack( $circuit ) . "." . 
-            MyFuses::getInstance()->getRequest()->getAction()->getName();
-        MyFusesContext::setParameter( "breadCrumb", $breadCrumb );
+    public function run()
+    {
+        $myFuses = Controller::getInstance();
+        $action = $myFuses->getCurrentAction();
+        $circuit = $myFuses->getRequest()->getAction()->getCircuit();
+        $breadCrumb =  $this->buildTrack($circuit) . "." .
+            $myFuses->getRequest()->getAction()->getName();
+        Context::setParameter( "breadCrumb", $breadCrumb );
     }
-    
-    private function buildTrack( Circuit $circuit ) {
+
+    private function buildTrack(Circuit $circuit)
+    {
         if( !is_null( $circuit->getParent() ) ) {
-            return  $this->buildTrack( $circuit->getParent() ) . " > " . $circuit->getName(); 
+            return  $this->buildTrack( $circuit->getParent() ) . " > " .
+                $circuit->getName();
         }
         return $circuit->getName();
     }
-    
 }

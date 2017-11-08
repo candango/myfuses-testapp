@@ -12,10 +12,12 @@ $time = microtime_float();
 
 var_dump( get_mem_usage() );*/
 
-require_once 'myfuses/MyFuses.php';
+require_once 'myfuses/src/MyFuses/Controller.php';
+
+use Candango\MyFuses\Controller;
 
 // creating new iflux instance
-$myFuses = MyFuses::getInstance();
+$myFuses = Controller::getInstance();
 
 $myFuses->createApplication( "TestApp" );
 

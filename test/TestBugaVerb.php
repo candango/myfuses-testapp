@@ -1,4 +1,7 @@
 <?php
+
+use Candango\MyFuses\Core\AbstractVerb;
+
 class TestBugaVerb extends AbstractVerb {
     
     private $value;
@@ -30,8 +33,8 @@ class TestBugaVerb extends AbstractVerb {
     public function getParsedCode( $commented, $identLevel ) {
         /*$strOut = parent::getParsedCode( $commented, $identLevel );
         $strOut .= str_repeat( "\t", $identLevel );
-        $strOut .= "var_dump( MyFuses::getCurrentCircuit()->getCustomAttribute( 'test', 'security' )  );die();\n\n";
-        return $strOut;*/ 
+        $strOut .= "var_dump( MyFuses::getCurrentCircuit()->getCustomAttribute( 'test', 'parameter' )  );die();\n\n";
+        return $strOut;*/
     }
-    
+
 }
