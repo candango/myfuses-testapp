@@ -44,6 +44,8 @@
         <parameter name="debug" value="false"/>
         
         <parameter name="tools" value="false"/>
+
+		<parameter name="security" value="pessimistic"/>
 	</parameters> 
 
 	<globalfuseactions>
@@ -55,7 +57,7 @@
 	
 	<plugins>
 		<phase name="preProcess">
-		    <plugin name="MyFusesBasicSecurity" >
+		    <plugin name="MyFusesSecurity" >
                 <parameter name="AuthenticationListener" 
                     value="TestAuthenticationListener"/>
                 <parameter name="LoginAction" value="security.login"/>

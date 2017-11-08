@@ -1,4 +1,4 @@
-<?$credential = MyFusesAbstractSecurityManager::getInstance()->getCredential();?>
+<?php $credential = MyFusesAbstractSecurityManager::getInstance()->getCredential();?>
 
 <h1>Security test application</h1>
 

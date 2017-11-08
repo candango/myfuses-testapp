@@ -2,8 +2,6 @@
 class TestAuthenticationListener implements MyFusesAuthenticationListener {
     
     public function authenticate( MyFusesSecurityManager $manager ) {
-        var_dump($manager);
-        die();
     	$users = array(
     	   'admin' => array( 'name' => 'Administration', 'password'=> 'adminpass' ),
     	   'usr1' => array( 'name' => 'User 1', 'password'=> 'usr1' ),
@@ -31,6 +29,7 @@ class TestAuthenticationListener implements MyFusesAuthenticationListener {
                         $users[ $userLogin ][  'name' ] );
                     
                     $credential->setAuthenticated( true );
+                    $manager->persistCredential($credential);
                 }
             }
         }
@@ -48,7 +47,7 @@ class TestAuthenticationListener implements MyFusesAuthenticationListener {
     }
     
     public function authenticationPerformed( MyFusesSecurityManager $manager ) {
-        
+
     }
     
 }

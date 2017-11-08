@@ -1,4 +1,4 @@
-<?
+<?php
 $userLoginFieldName = MyFusesAbstractSecurityManager::getInstance()->getUserLoginField();
 $userPasswordFieldName = MyFusesAbstractSecurityManager::getInstance()->getUserPasswordField();
 ?>
@@ -13,12 +13,12 @@ $userPasswordFieldName = MyFusesAbstractSecurityManager::getInstance()->getUserP
 <p><input type="submit" name="submit" value="Login" /></p>
 
 </form>
-<?if( isset( $_SESSION[ 'MYFUSES_SECURITY' ][ 'AUTH_ERRORS' ][ "error" ] ) ) {?>
+<?php if( isset( $_SESSION[ 'MYFUSES_SECURITY' ][ 'AUTH_ERRORS' ][ "error" ] ) ) { ?>
 <div style="color:red;">
 <?=$_SESSION[ 'MYFUSES_SECURITY' ][ 'AUTH_ERRORS' ][ "error" ];?>
 </div>
-<?}?>
-<?
+<?php } ?>
+<?php
 function getErrorByFieldName( $fieldName ) { 
 	return isset(
 	   $_SESSION[ 'MYFUSES_SECURITY' ][ 'AUTH_ERRORS' ][ $fieldName ] ) ? 
