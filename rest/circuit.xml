@@ -2,7 +2,7 @@
 <!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
     "http://www.candango.org/myfuses/dtd/circuit.dtd">
 <circuit access="public"
-    xmlns:data="core/verbs/data/">
+    xmlns:data="Core/Verbs/Data/">
 	
 	<fuseaction name="toJson">
         <do action="includeDependencies" />

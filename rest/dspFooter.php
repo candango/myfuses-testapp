@@ -1,2 +1,2 @@
 <br>
-<a href="<?=MyFuses::getMySelfXfa( "backtoMenu" )?>">Back To Main Menu</a>
+<a href="<?=xfa("backtoMenu")?>">Back To Main Menu</a>

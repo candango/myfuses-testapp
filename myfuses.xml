@@ -17,8 +17,7 @@
         <circuit alias="basic" path="basic/" parent="main" />
         <circuit alias="rest" path="rest/" parent="main" />
     </circuits>
-    
-    
+
     <classes>
         <class alias="Account" classpath="classes/Account.php" />
         <class alias="Entity" classpath="classes/Entity.php" />
@@ -46,7 +45,7 @@
         <parameter name="rewrite" value="true"/>
         <parameter name="ignoreFuseactionVariable" value="true"/>
         -->
-        <parameter name="tools" value="false"/>
+        <parameter name="tools" value="true"/>
     </parameters> 
 
     <globalfuseactions>
