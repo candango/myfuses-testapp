@@ -4,3 +4,6 @@
 
 <b>Value from the array index:</b> <?=$anarray['index']?><br>
 <b>Value from the array index1:</b> <?=$anarray['index1']?>
+
+
+<h4>Test append parameter</h4>
