@@ -55,6 +55,12 @@
         <set name="anarray['index']" value="The array index value."/>
         <set name="anarray['index1']" value="return 'The array index1 value with eval.';" evaluate="true"/>
         <include file="dspSet.php"/>
+        <set name="appendTry" value="First"/>
+        <set name="appendedVariable" value="Fist set with append." append="true"/>
+        <include file="dspSetAppend.php"/>
+        <set name="appendTry" value="Second"/>
+        <set name="appendedVariable" value="Second set with append." append="true"/>
+        <include file="dspSetAppend.php"/>
     </fuseaction>
 
     <fuseaction name="switch">
