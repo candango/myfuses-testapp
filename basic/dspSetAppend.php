@@ -1,1 +1,1 @@
-<b><?=$appendTry?> append atempt:</b> <?=$appendedVariable?><br>
+<b><?=$appendTry?> append attempt:</b> <?=$appendedVariable?><br>
