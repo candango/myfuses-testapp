@@ -1,2 +1,5 @@
 # PyCharm
 .idea
+
+#Node/Yarn
+node_modules
