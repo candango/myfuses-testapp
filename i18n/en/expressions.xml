@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <expressions>
-    <expression name="MYFUSES_TEST_APPLICATION">myFuses Test Application</expression>
+    <expression name="MYFUSES_TEST_APP">MyFuses Test App</expression>
     <expression name="MENU">Menu</expression>
 </expressions>

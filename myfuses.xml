@@ -46,7 +46,7 @@
         <parameter name="rewrite" value="true"/>
         <parameter name="ignoreFuseactionVariable" value="true"/>
         -->
-        <parameter name="tools" value="false"/>
+        <parameter name="tools" value="true"/>
     </parameters> 
 
     <globalfuseactions>
