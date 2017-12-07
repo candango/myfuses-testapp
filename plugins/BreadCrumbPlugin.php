@@ -1,19 +1,29 @@
 <?php
 class BreadCrumbPlugin extends AbstractPlugin {
-    
+
     public function run() {
         $action = MyFuses::getInstance()->getCurrentAction();
-        $circuit = MyFuses::getInstance()->getRequest()->getAction()->getCircuit();
-        $breadCrumb =  $this->buildTrack( $circuit ) . "." . 
-            MyFuses::getInstance()->getRequest()->getAction()->getName();
+        $circuit = $action->getCircuit();
+        $items =  $this->buildTrack( $circuit );
+        $items[] = $action->getName();
+        MyFusesContext::setParameter("items", $items);
+        ob_start();
+        include "dspBreadCrumb.php";
+        $breadCrumb = ob_get_contents();
+        ob_end_clean();
         MyFusesContext::setParameter( "breadCrumb", $breadCrumb );
     }
-    
+
     private function buildTrack( Circuit $circuit ) {
+        $items = array();
         if( !is_null( $circuit->getParent() ) ) {
-            return  $this->buildTrack( $circuit->getParent() ) . " > " . $circuit->getName(); 
+            $parents = $this->buildTrack($circuit->getParent());
+            foreach ($parents as $parent) {
+                $items[] = $parent;
+            }
         }
-        return $circuit->getName();
+        $items[] = $circuit->getName();
+        return $items;
     }
-    
+
 }
