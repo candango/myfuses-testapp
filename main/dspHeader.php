@@ -10,12 +10,12 @@
     <title>MyFuses Test App</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="static/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="static/css/myfuses-testapp.css" rel="stylesheet">
+    <link href="/static/css/myfuses-testapp.css" rel="stylesheet">
 
-    <script src="static/node_modules/steal/steal.js" main="app"></script>
+    <script src="/static/node_modules/steal/steal.js" main="app"></script>
 
 </head>
 
