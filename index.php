@@ -14,6 +14,8 @@ var_dump( get_mem_usage() );*/
 
 require_once 'myfuses/src/MyFuses/Controller.php';
 
+require_once(__DIR__ . '/vendor/autoload.php');
+
 use Candango\MyFuses\Controller;
 
 // creating new iflux instance

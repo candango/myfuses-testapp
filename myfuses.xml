@@ -20,6 +20,7 @@
 
     <classes>
         <class alias="Account" classpath="classes/Account.php" />
+        <class alias="AccountNamespace" namespace="Candango\MyFusesTestApp\Account" />
         <class alias="Entity" classpath="classes/Entity.php" />
     </classes>
     

@@ -37,6 +37,28 @@
         <include file="dspInvokeTestArguments.php"/>
     </fuseaction>
 
+
+    <fuseaction name="instantiateInvokeNamespace">
+        <include file="dspInstantiateNamespace.php"/>
+        <instantiate class="AccountNamespace" object="account">
+            <argument value="tgreets" />
+        </instantiate>
+        <invoke object="account" method="getName" returnvariable="login"/>
+        <include file="dspInvoke.php"/>
+        <invoke object="account" method="setName" >
+            <argument value="rmark"/>
+        </invoke>
+        <invoke object="account" method="getName" returnvariable="login"/>
+
+        <include file="dspInvoke.php"/>
+
+        <instantiate class="Account" object="account2" arguments="'test arguments'"/>
+
+        <invoke object="account2" methodcall="getName()" returnvariable="login2"/>
+
+        <include file="dspInvokeTestArguments.php"/>
+    </fuseaction>
+
     <fuseaction name="if">
         <xfa name="goToMyself" value="if"/>
         <if condition="isset($_GET[ 'pessoa' ])">
