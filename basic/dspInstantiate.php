@@ -2,8 +2,8 @@
 
 <h3>Actions</h3>
 <ul>
-	<li>Instantiating an Accont class</li>
-	<li>Invoking getLogin mehtod and displaying</li>
-	<li>Invoking setLogin mehtod</li>
-	<li>Invoking getLogin mehtod and displaying</li>
+	<li>Instantiating an Account class</li>
+	<li>Invoking getLogin method and displaying</li>
+	<li>Invoking setLogin method</li>
+	<li>Invoking getLogin method and displaying</li>
 </ul>
