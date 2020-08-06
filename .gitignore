@@ -1,2 +1,10 @@
 # PyCharm
 .idea
+
+# MyFuses
+parsed
+
+# Composer
+composer.phar
+composer.lock
+vendor
