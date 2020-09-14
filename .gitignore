@@ -1,6 +1,13 @@
 # PyCharm
 .idea
 
-#Node/Yarn
+# MyFuses
+parsed
+
+# Composer
+composer.phar
+composer.lock
+vendor
+
+# NPM
 node_modules
-yarn.lock
