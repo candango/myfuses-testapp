@@ -8,3 +8,6 @@ parsed
 composer.phar
 composer.lock
 vendor
+
+# NPM
+node_modules
