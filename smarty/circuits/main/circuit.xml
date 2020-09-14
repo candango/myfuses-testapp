@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
+    "http://www.candango.org/myfuses/dtd/circuit.dtd">
+<circuit access="public" xmlns:smarty="Core/Verbs/Smarty/">
+    
+    <fuseaction name="index" >
+        <do action="showIndex"/>
+        <xfa name="goToIndex" value="index"/>
+        <smarty:configure/>
+        <smarty:assign name="test" value="a value"/>
+        <smarty:add file="header.tpl"/>
+        <smarty:add file="index.tpl"/>
+        <smarty:add file="footer.tpl"/>
+        <smarty:show />
+    </fuseaction>
+    
+    <fuseaction name="showIndex">
+    </fuseaction>
+    
+</circuit>
