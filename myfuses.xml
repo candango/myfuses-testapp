@@ -51,6 +51,7 @@
 
     <globalfuseactions>
         <preprocess>
+            <do action="main.global"/>
         </preprocess>
         <postprocess>
         </postprocess>
