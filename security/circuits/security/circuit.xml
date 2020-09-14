@@ -2,13 +2,11 @@
 <!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
     "http://www.candango.org/myfuses/dtd/circuit.dtd">
 <circuit access="public">
-    
     <fuseaction name="login" >
         <include file="dspLogin.php"/>
     </fuseaction>
-    
+
     <fuseaction name="authenticate" />
-    
-     <fuseaction name="logout" />
-    
+
+    <fuseaction name="logout" />
 </circuit>

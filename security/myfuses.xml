@@ -12,70 +12,63 @@
     @author: Flavio Garcia flavio@viacerrado.com
 -->
 <myfuses>
-	<circuits>
-		<circuit alias="main" path="circuits/main/" parent="" />
-		<circuit alias="security" path="circuits/security/" parent="" />
-	</circuits>
-    
-    
+    <circuits>
+        <circuit alias="main" path="circuits/main/" parent="" />
+        <circuit alias="security" path="circuits/security/" parent="" />
+    </circuits>
+
     <classes>
-        
     </classes>
-    
-	<parameters>
+
+    <parameters>
         <parameter name="defaultFuseaction" value="main.index" />
         <!-- you may want to change this to development mode: -->
         <parameter name="mode" value="development" />
         <!-- change this to something more secure: -->
         <parameter name="password" value="secTestApp" />
-        <!--
-            These are all default values that can be overridden:
+        <!-- These are all default values that can be overridden:
         <parameter name="fuseactionVariable" value="fuseaction" />
         <parameter name="precedenceFormOrUrl" value="form" />
         <parameter name="scriptFileDelimiter" value="php" />
-        <parameter name="maskedFileDelimiters" value="htm,cfm,cfml,php,php4,asp,aspx" />
+        <parameter name="maskedFileDelimiters"
+            value="htm,cfm,cfml,php,php4,asp,aspx" />
         <paramater name="strictMode" value="false" />
         <parameter name="allowImplicitCircuits" value="false" />
         -->
         <parameter name="parseWithComments" value="true" />
-        
         <parameter name="characterEncoding" value="iso-8859-1"/>
-        
         <parameter name="debug" value="false"/>
-        
         <parameter name="tools" value="false"/>
+        <parameter name="security" value="pessimistic"/>
+    </parameters> 
 
-		<parameter name="security" value="pessimistic"/>
-	</parameters> 
+    <globalfuseactions>
+        <preprocess>
+        </preprocess>
+        <postprocess>
+        </postprocess>
+    </globalfuseactions>
 
-	<globalfuseactions>
-		<preprocess>
-		</preprocess>
-		<postprocess>
-		</postprocess>
-	</globalfuseactions>
-	
-	<plugins>
-		<phase name="preProcess">
-		    <plugin name="MyFusesSecurity" >
+    <plugins>
+        <phase name="preProcess">
+            <plugin namespace="Candango\MyFuses\Plugins\Security" >
                 <parameter name="AuthenticationListener" 
                     value="TestAuthenticationListener"/>
                 <parameter name="LoginAction" value="security.login"/>
+                <parameter name="LogoutAction" value="security.logout"/>
                 <parameter name="AuthenticationAction" 
                     value="security.authenticate"/>
             </plugin>
-		</phase>
-		<phase name="preFuseaction">
-		</phase>
-		<phase name="postFuseaction">
-		</phase>
-		<phase name="fuseactionException">
-		</phase>		
-		<phase name="postProcess">
-		</phase>
-		<phase name="processError">
-			
-		</phase>
-	</plugins>
-
+        </phase>
+        <phase name="preFuseaction">
+        </phase>
+        <phase name="postFuseaction">
+        </phase>
+        <phase name="fuseactionException">
+        </phase>
+        <phase name="postProcess">
+        </phase>
+        <phase name="processError">
+        </phase>
+    </plugins>
 </myfuses>

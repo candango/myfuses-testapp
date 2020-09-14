@@ -1,6 +1,8 @@
 <?php
-$userLoginFieldName = MyFusesAbstractSecurityManager::getInstance()->getUserLoginField();
-$userPasswordFieldName = MyFusesAbstractSecurityManager::getInstance()->getUserPasswordField();
+use Candango\MyFuses\Security\AbstractSecurityManager;
+
+$userLoginFieldName = AbstractSecurityManager::getInstance()->getUserLoginField();
+$userPasswordFieldName = AbstractSecurityManager::getInstance()->getUserPasswordField();
 ?>
 <h2>User Login</h2>
 

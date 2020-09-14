@@ -2,13 +2,11 @@
 <!DOCTYPE circuit PUBLIC "-//MYFUSES//DTD CIRCUIT 1.0 Strict//EN"
     "http://www.candango.org/myfuses/dtd/circuit.dtd">
 <circuit access="public">
-    
     <fuseaction name="index" >
         <do action="showIndex"/>
     </fuseaction>
-    
-    <fuseaction name="showIndex" >
+
+    <fuseaction name="showIndex">
         <include file="dspIndex.php"/>
     </fuseaction>
-    
 </circuit>
