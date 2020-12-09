@@ -12,8 +12,8 @@
         <include file="dspShowContent.php"/>
     </fuseaction>
 
-    <fuseaction name="actionToDo">
-        <include template="dspDo.php"/>
+    <fuseaction name="actionToDo" access="internal">
+        <include template="actDo.php"/>
     </fuseaction>
 
     <fuseaction name="instantiateInvoke">
